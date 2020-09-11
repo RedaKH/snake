@@ -90,3 +90,28 @@ let newHead= {
 
 }
 snake.unshift(newHead);
+
+if (snakeX==food.x && snakeY==food.y) {
+    score++;
+    food={
+        x:unit*Math.floor(Math.random()*17+1),
+        y:unit*Math.floor(Math.random()*15+3)
+    }
+    //On ajoute newhead sans le snake.pop
+    
+} else {
+    
+}
+
+function collision(newHead,snake) {
+    
+    for ( let i=0;i<snake.length;i++) {
+       if (newHead.x==snake[i].x && newHead.y == snake[i].y) {
+           return true;
+           
+       }
+        
+    }
+    return false;
+}
+
