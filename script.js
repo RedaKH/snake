@@ -1,12 +1,23 @@
 //création du niveau
-const cvs = document.getElementById('canvas');
+const cvs = document.getElementById('snake');
 const ctx = cvs.getContext('2d');
 
-let imageName = new Image();
-imageName.src ="path/img.png";
+const box = 32;
+
+const ground  = new Image ();
+ground.src="ground.png";
+
+const food = new Image();
+food.src="food.png";
+
+/*let imageName = new Image();
+imageName.src ="snake/ground.png";
+imageName.src="snake/food.png";
+
 let audioName= new Audio();
 audioName.src="path/audio.png";
 audioName.play();
+*/
 
 ctx.drawImage(imageName,X,Y,Width,Height);
 ctx.drawImage("",40,50,25,25);
